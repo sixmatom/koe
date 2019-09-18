@@ -10,6 +10,6 @@ Scenario Outline: feeding a suckler cow
     | weight | energy | protein |
     |    450 |  26500 |     215 |
     |    500 |  29500 |     245 |
-    # |    575 |  31500 |     255 |
+    |    575 |  31500 |     255 |
     # |    600 |  37000 |     305 |
     # |    650 |  40000 |     350 |

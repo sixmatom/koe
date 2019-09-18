@@ -1,14 +1,16 @@
 class Cow:
 
-    def __init__(self):
-        self.weight = 450
+    def __init__(self, weight):
+        self.weight = weight
 
-berta = Cow()
 
 class Feed:
 
-    def __init__(self):
-        self.energy = 26500
-        self.protein = 215
-
+    def __init__(self, koe):
+        if koe.weight == 450:
+            self.energy = 26500
+            self.protein = 215
+        else:
+            self.energy = 29500
+            self.protein = 245
 

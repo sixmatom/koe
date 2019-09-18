@@ -1,13 +1,15 @@
 from behave import given, when, then  # pylint: disable=no-name-in-module
-from koe import berta, Feed
+from koe import Cow, Feed
 
 @given(u'the cow weighs {weight:d} kg')
 def test_weight(context, weight):
-    assert berta.weight == weight
+    context.cow = Cow(weight)
+    assert context.cow.weight == weight
+
 
 @when(u'we calculate the feeding requirements')
 def feed(context):
-    context.feed = Feed()
+    context.feed = Feed(context.cow)
 
 @then(u'the energy should be {energy:d} MJ')
 def test_energy(context, energy):
