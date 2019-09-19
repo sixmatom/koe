@@ -3,9 +3,13 @@ from koe import Cow, Feed
 
 @given(u'the cow weighs {weight:d} kg')
 def test_weight(context, weight):
-    context.cow = Cow(weight)
-    assert context.cow.weight == weight
+        context.weight = weight
+        
 
+@given(u'the cow is {age:d} years')    
+def test_age(context, age):
+    context.cow = Cow(context.weight, age)
+  
 
 @when(u'we calculate the feeding requirements')
 def feed(context):
