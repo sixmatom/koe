@@ -1,3 +1,4 @@
+import math
 class Cow:
 
     def __init__(self, weight, age):
@@ -25,6 +26,4 @@ class Feed:
        
         elif koe.weight == 650 and koe.age >= 0:
             self.energy = 40000*(1-(0.05*koe.age))
-            self.protein = 350*(1-(0.05*koe.age))
-        
-
+            self.protein = math.ceil(350*(1-(0.05*koe.age)))
