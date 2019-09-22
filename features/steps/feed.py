@@ -1,5 +1,6 @@
 from behave import given, when, then  # pylint: disable=no-name-in-module
-from koe import Cow, Feed
+
+from koe import Cow, Feed , math
 
 @given(u'the cow weighs {weight:d} kg')
 def test_weight(context, weight):
